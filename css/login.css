@@ -1,0 +1,38 @@
+*{
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+}
+.boxes{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://rubyhall.com/img/bg/Visa-Medical-Services_hero.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 10px 10%;
+    overflow: hidden;
+  
+  
+}
+.box{
+  width: 310px;
+  background: linear-gradient(45deg, #f5ebef, #dd5d22);
+  padding: 5rem;
+  margin: 2rem 2rem;
+  text-align: center;
+  border-radius: 30px;
+  border: 10px ;
+  box-shadow: rgb(16, 16, 20);
+  align-items: center;
+}
+.box h4 a{
+  text-decoration: none;
+  color: blue;
+  font-weight: 600;
+}
+.box h4 a:hover{
+  color: rgb(54, 54, 150);
+}

@@ -1,0 +1,479 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://rubyhall.com/img/bg/Visa-Medical-Services_hero.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 10px 10%;
+    overflow: hidden;
+}
+nav{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+nav img{
+    width: 80px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+}
+nav ul li a:hover{
+ color: #eb5008;
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(10, 8, 10);
+    padding: 14px 40px;
+    font-weight: 400;
+    background-image: linear-gradient(45deg, #f5ebef, #dd5d22);
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    transition: 0.5s;
+}
+.content{
+    margin-top: 10%;
+    max-width: 600px;
+}
+.content h1{
+    font-size: 50px;
+    color: #222;
+}
+.content p{
+    margin: 10px 0 30px;
+    color: #333;
+    animation-delay: 0.5s;
+}
+.content .btn{
+    padding: 15px 80px;
+    font-size: 16px;
+    animation-delay: 1s;
+}
+.btn:hover{
+    border-top-right-radius: 30px;
+}
+.anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+@keyframes moveup{
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container{
+    width: 100%;
+    height: 65vh;
+    padding: 0 8;
+}
+.container h1{
+    text-align: center;
+    padding-top: 5%;
+    margin-bottom: 60px;
+    font-weight: 600;
+    position: relative;
+}
+.container h1::after{
+    content: '';
+    background: #dd5d22;
+    width: 100px;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+.service{
+    text-align: center;
+    padding: 25px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background: transparent;
+    transition: transform 0.5s, background 0.5s;
+}
+.service i{
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #dd5d22;
+}
+.service h2{
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.service:hover{
+    background: linear-gradient(45deg, #f5ebef, #dd5d22);
+    color: #fff;
+    transform: scale(1.05);
+}
+.service:hover i{
+    color: #fff;
+}
+
+.doctor{
+    max-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+.slide-container{
+    max-width: 1120px;
+    width: 100%;
+    background-color: rgb(241, 234, 234);
+    padding: 60px 0;
+}
+.doctor h1{
+    text-align: center;
+    padding-top: 5%;
+    margin-bottom: 60px;
+    font-weight: 600;
+    position: relative;
+
+}
+.doctor h1::after{
+    content: '';
+    background: #dd5d22;
+    width: 100px;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slide-content{
+    margin: 0 40px;
+    background-color: #9ba0b6;
+    overflow: hidden;
+    border-radius: 25px;
+}
+.card{
+    border-radius: 25px;
+    background-color: #fff;
+}
+.image-content, 
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+.image-content{
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #dd5d22;
+    border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #dd5d22;
+}
+.overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: #fff;
+
+}
+.card-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-width: 50%;
+    background: #dd5d22;
+    padding: 3px;
+}
+.card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #dd5d22;
+}
+.name{
+    font-size: 18px;
+    font-weight: 500;
+    color: #dd5d22;
+}
+.description{
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+.button{
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    padding: 8px 16px;
+    background-color: #dd5d22;
+    border-radius: 6px;
+    margin: 14px;
+}
+.button:hover{
+    background: #e74c04;
+}
+
+.swiper-navBtn{
+    color: #adb0c0;
+    transition: color 0.3s ease;
+}
+.swiper-navBtn:hover{
+    color: #c3c1ce;
+}
+
+.amg-banner{
+    max-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding-top: 10%;
+    text-align: center;
+}
+.amg {
+    background: #dd5d22;
+    color: #fff;
+    background-size: 50%;
+    padding: 30px 0;
+    padding-top: 10%;
+    width: 100%;
+    height: 50vh;
+  }
+.amg h3{
+  text-align: center;
+  margin-bottom: 60px;
+  font-weight: 600;
+  position: relative;
+}
+.amg .amg-btn {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 10px 35px;
+    border-radius: 25px;
+    transition: 0.5s;
+    margin-top: 10px;
+    border: 2px solid #fff;
+    color: #fff;
+  }
+  
+.amg .amg-btn:hover {
+    background: #fff;
+    color: #050505;
+  }
+
+
+.shedule{
+	width: 100%;
+    height: 100vh;
+	padding-left: 30%;
+	padding-top: 7rem;
+    overflow: hidden;
+	justify-content: center;
+	align-items: center;
+}
+.card{
+	width: 50%;
+	height: 70vh;
+    align-items: center;
+    justify-content: center;
+    
+}
+.inner-box{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: transform 1s;
+}
+.card-front, .card-back{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding: 55px;
+	box-sizing: border-box;
+	backface-visibility: hidden;
+}
+.card-back{
+	transform: rotateY(180deg);
+}
+.card h2{
+	font-weight: normal;
+	font-size: 24px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.input-box{
+	width: 100%;
+	border: 1px solid #fff;
+	padding: 0 10px;
+	margin: 6px 0;
+	height: 32px;
+	border-radius: 20px;
+	box-sizing: border-box;
+	outline: none;
+	color: rgb(5, 1, 1);
+}
+::placeholder{
+	color: rgb(70, 69, 69);
+	font-size: 12px;
+}
+button{
+	width: 100%;
+	border: 1px solid #fff;
+	height: 32px;
+	font-size: 12px;
+	border-radius: 20px;
+	padding: 0 10px;
+	margin: 35px 0 10px;
+	box-sizing: border-box;
+	outline: none;
+	color: rgb(12, 13, 15);
+	cursor: pointer;
+	background-color:  #dd5d22;
+}
+button:hover{
+	background-color: #f85509;
+}
+.submit-btn{
+	position: relative;
+}
+.submit-btn::after{
+	content: '\27a4';
+	color: rgb(175, 34, 34);
+	line-height: 32px;
+	font-size: 17px;
+	height: 32px;
+	width: 32px;
+	border-radius: 50%;
+	background: #fff;
+	position: absolute;
+	right: -1px;
+	top: -1px;
+}
+
+
+.footer{
+    margin-top: 80px;
+    background-color:  #dd5d22;
+}
+
+.foot{
+    padding: 20px 0;
+}
+
+.footer-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.footlinks h4{
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+
+.footlinks h4::before{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 70px;
+    left: 0;
+    bottom: -7px;
+    background: white;
+}
+
+.footlinks ul li{
+    margin-bottom: 15px;
+}
+
+.footlinks ul li a{
+    font-size: 17px;
+    color: #dddddd;
+    display: block;
+    transition: ease 0.30s;
+}
+
+.footlinks ul li a:hover{
+    transform: translate(6px);
+    color: white;
+}
+
+.social a{
+    font-size: 25px;
+    margin: 4px;
+    height: 40px;
+    width: 40px;
+    color:#dd5d22;
+    background-color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    transition: ease 0.30s;
+}
+
+.social a:hover{
+    transform: scale(1.2);
+}
+
+.end{
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 12px;
+}
+
+.end p{
+    font-size: 15px;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
